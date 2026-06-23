@@ -107,3 +107,13 @@ case ":$PATH:" in
     info "Add it, e.g.:  echo 'export PATH=\"$install_dir:\$PATH\"' >> ~/.zshrc && source ~/.zshrc"
     ;;
 esac
+
+# --- skills install hint -----------------------------------------------------
+# Skills ship inside the binary. Installing them to disk lets an AI agent
+# auto-trigger them at runtime. We only print guidance: we cannot know which
+# project to target from a piped installer, and we never write to your home.
+info ""
+info "Next: enable skills for AI agents."
+info "  cd into your VFS project, then run:  vfs-cli skills install"
+info "  This unpacks the embedded skills into ./.claude/skills so an agent"
+info "  picks them up automatically. Use --global to install to ~/.claude/skills."
