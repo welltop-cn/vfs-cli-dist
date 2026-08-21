@@ -42,7 +42,7 @@ esac
 # We only publish a subset of os/arch combos; reject the rest with a clear msg.
 target="${os}_${arch}"
 case "$target" in
-  darwin_arm64|linux_amd64) ;;
+  darwin_arm64|darwin_amd64|linux_amd64) ;;
   *) err "no published binary for ${os}/${arch}; build from source: go install github.com/${SRC_REPO}/cmd/vfs-cli@latest" ;;
 esac
 
